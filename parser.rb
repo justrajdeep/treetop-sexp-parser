@@ -1,3 +1,4 @@
+#!/bin/env ruby
 require 'treetop'
 
 # Load our custom syntax node classes so the parser can use them
@@ -43,3 +44,6 @@ class Parser
     end
 
 end
+
+
+p Parser.parse('(this "is" a test( 1 2.0 3))')

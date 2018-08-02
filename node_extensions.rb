@@ -7,6 +7,7 @@
 module Sexp
   class IntegerLiteral < Treetop::Runtime::SyntaxNode
     def to_array
+      raise
       return self.text_value.to_i
     end
   end
@@ -19,6 +20,7 @@ module Sexp
   
   class FloatLiteral < Treetop::Runtime::SyntaxNode
     def to_array
+      raise
       return self.text_value.to_f
     end
   end
@@ -37,6 +39,7 @@ module Sexp
   
   class Body < Treetop::Runtime::SyntaxNode
     def to_array
+      raise
       return self.elements.map {|x| x.to_array}
     end
   end
